@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Evandro</title>
+</head>
+<body>
+
+    <div class="particulas"></div>
+                    <!--Cabeçalho-->
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre Mim</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos"class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+                    <!--Início-->
+
+    <main id="inicio" class="cabecalho">
+        
+            <img src="img/1738413958670.jpeg" alt="foto--perfil" class="foto-perfil">
+            <h1>Evandro Nascimento</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
+        
+
+    </main>
+                    <!--Sobre Mim-->
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+        <p class="sobre-paragrafo">Olá! Meu nome é Evandro Nascimento,sou um desenvolvedor front-end apaixonado por criar experiências digitais envolventes. Com habilidades em HTML, CSS e JavaScript, estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades para entregar projetos de alta qualidade.</p>
+        </div>
+
+    </section>
+    
+                  
+                    <!--Projetos-->
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+         <div class="projetos-caixa">
+
+        <div class="projetos-cards">
+            <img src="img/projeto DeclubStore.jpg.jpg" alt="projeto 1" class="projetos-imagem">
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Projeto  Store Apple</h3>
+            <p class="paragrafo-projetos">Um site responsivo para exibir meus trabalhos e habilidades como desenvolvedor front-end.</p>
+            </div>
+        </div>
+
+        <div class="projetos-cards">
+            <img src="img/projeto seleçãp de carros.jpg.jpg" alt="projeto 2" class="projetos-imagem">
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Projeto loja de carros</h3>
+            <p class="paragrafo-projetos">Um site responsivo para exibir meus trabalhos e habilidades como desenvolvedor front-end.</p>
+            </div>
+        </div>
+
+        <div class="projetos-cards">
+            <img src="img/projeto Zoom.jpg.jpg" alt="projeto 3" class="projetos-imagem">
+            <div class="caixa-textos-projeto"></div>
+            <h3 class="info-projetos">Projeto projeto Zoom</h3>
+            <p class="paragrafo-projetos">Um site responsivo para exibir meus trabalhos e habilidades como desenvolvedor front-end.</p>
+        </div>
+        </div>
+
+     </section>
+
+                    <!--Contatos-->
+
+    <section id="contatos" class="contatos">
+        <h2 class="contato-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="fomulario" onsubmit="enviarWhatsApp(event)">
+            <div class="grupo-form"> 
+            <input placeholder="Nome" class="campo-form" id="nome" type="text" required>
+            </div>
+
+            <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua menssagem" rows="6" id="menssagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+    
+        <script>
+
+        function enviarWhatsApp(event) {
+            event.preventDefault(); 
+           
+            const nome = document.getElementById('nome'). value;
+            const menssagem = document.getElementById('menssagem').value;
+            const telefone = '5582988619483'
+
+        const texto = `Olá, meu nome é ${nome}, ${menssagem}`
+        const msgFormatada = encodeURIComponent(texto);
+    const url = `http://wa.me/5582988619483?text=${msgFormatada}`;
+
+    window.open(url, '_blank');
+     }
+        
+
+        </script>
+</body>
+</html>
